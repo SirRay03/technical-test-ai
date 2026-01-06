@@ -163,6 +163,14 @@ docker run --rm -p 8000:8000 --env-file .env cv-summarizer
 
 ---
 
+### Field Extraction Accuracy
+- The LLM performs best-effort information extraction from unstructured CV text.
+- In some cases, fields such as `name` and `location` may be returned as `null` even though they appear in the document.
+- This is a known limitation of zero-shot LLM extraction from heterogeneous CV formats and does not indicate a failure in PDF parsing or API logic.
+- The work experience summary is prioritized and generally more reliable due to richer contextual signals in CV content.
+
+---
+
 ## Status
 
 Task 1 implementation complete and ready for evaluation.
