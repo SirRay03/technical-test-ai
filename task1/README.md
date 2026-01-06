@@ -147,15 +147,6 @@ docker run --rm -p 8000:8000 --env-file .env cv-summarizer
   ```
   HTTP 402 – Insufficient credits
   ```
-* In this case, the service responds with:
-
-  ```json
-  {
-    "error": "llm_failed",
-    "detail": "OpenRouter HTTP 402: Insufficient credits"
-  }
-  ```
-* The PDF ingestion and extraction pipeline still executes successfully.
 
 ### Model Behavior
 
